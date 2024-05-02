@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Details</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="user-card">
+            <div class="user-card-img">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png" alt="">
+            </div>
+            <div class="user-card-info">
+              <h2><%= user.name %></h2>
+              <p><span>Age:</span> <%= user.age %></p>
+              <p><span>Blood Group:</span>  <%= user.blood %></p>
+              <p><span>Allergies:</p>
+              <ul>
+                    <% for (let i=0; i<user.allergies.length; i++)  { %>
+                        <li> <%= user.allergies[i] %></li>
+                    <% } %>
+              </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
